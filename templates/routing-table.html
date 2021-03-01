@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Routing table</title>
+</head>
+<body>
+    <div class="top">
+        <h1><a href="{{ url_for('home') }}">GUI for RIP</a></h1>
+    </div>
+
+    <section class="content">
+        <h2>Routing table</h2>
+        <div class="routing-table">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>Destination</th>
+                    <th>Mask</th>
+                    <th>Next hop</th>
+                    <th>Metric</th>
+                </tr>
+                {% if routes %}
+                    {% for route in routes %}
+                    <tr>
+                        <td>{{ route.ip }}</td>
+                        <td>{{ route.mask }}</td>
+                        <td>{{ route.nextHop }}</td>
+                        <td>{{ route.metric }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <td colspan="4">Routing table is empty.</td>
+                {% endif %}
+            </table>
+        </div>
+        <button type="button" onclick="window.location.href = '{{ url_for('home') }}';">Back</button>
+    </section>
+</body>
+</html>

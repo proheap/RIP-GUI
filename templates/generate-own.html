@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Adding networks</title>
+<head>
+<body>
+    <div class="top">
+        <h1><a href="{{ url_for('home') }}">GUI for RIP</a></h1>
+    </div>
+    <section class="content">
+        <header>
+            <h2>Generating own network</h2>
+        </header>
+        {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
+        <form method="post">
+            <label for="network_ip">Network address:</label>
+            <input name="network_ip" id="network_ip" required>
+            <label for="network_mask">Network mask:</label>
+            <input name="network_mask" id="network_mask" value="255.255.255.0" required>
+            <label for="nextHop_ip">Next hop:</label>
+            <input name="nextHop_ip" id="nextHop_ip" value="0.0.0.0" required>
+            <label for="metric">Metric:</label>
+            <input name="metric" id="metric" type="number" value="1" min="1" max="15" required>
+            <input type="submit" value="Generate network">
+        </form>
+        <button type="button" onclick="window.location.href = '{{ url_for('home') }}';">Back</button>
+    </section>
+</body>
+<html>

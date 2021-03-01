@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Adding networks</title>
+<head>
+<body>
+    <div class="top">
+        <h1><a href="{{ url_for('home') }}">GUI for RIP</a></h1>
+    </div>
+    <section class="content">
+        <header>
+            <h2>Generating networks</h2>
+        </header>
+        {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
+        <form method="post">
+            <label for="count">How many networks do you want generate:</label>
+            <input name="count" id="count" type="number" value="1" min="1" required>
+            <input type="submit" value="Generate networks">
+        </form>
+        <button type="button" onclick="window.location.href = '{{ url_for('home') }}';">Back</button>
+    </section>
+</body>
+<html>

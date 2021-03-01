@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>GUI for RIP</title>
+</head>
+<body>
+    <div class="top">
+        <h1><a href="{{ url_for('home') }}">GUI for RIP</a></h1>
+    </div>
+    <ul>
+        <li><a href="{{ url_for('add_network') }}">Add network</a>
+        <li><a href="{{ url_for('remove_network') }}">Remove network</a>
+        <li><a href="{{ url_for('generate_random_networks') }}">Generate random networks</a>
+        <li><a href="{{ url_for('generate_own_network') }}">Generate own network</a>
+        <li><a href="{{ url_for('routing_table') }}">Routing table</a>
+    </ul>
+</body>
+</html>
