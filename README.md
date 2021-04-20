@@ -1,9 +1,8 @@
 
-# IMPLEMENTATION OF RIP (ROUTING INFORMATION PROTOCOL)
+# IMPLEMENTATION OF RIP
 ![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white)
 [![Latest 1.0](https://img.shields.io/badge/latest-v2.1-red.svg?style=flat-square)]()
 [![Python 3.7](https://img.shields.io/badge/python-v3.7-green.svg?style=flat-square)](https://www.python.org/downloads/release/python-393/)  
-
 Implementation of selected functions of RIP (Routing Infromation Protocol) in Python language (backend) as well as a userfriendly interface, WebGUI, to set the RIP function parameters (frontend) for the Linux operating system.
 
 ---
