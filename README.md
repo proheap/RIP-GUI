@@ -1,5 +1,5 @@
 
-Implementácia smerovacieho protokolu RIP v jazyku Python
+Implementácia smerovacieho protokolu RIP v jazyku Python  
 [![Latest 1.0](https://img.shields.io/badge/latest-v1.0-red.svg)]()
 [![Python 3.7](https://img.shields.io/badge/python-v3.7-green.svg)](https://www.python.org/downloads/release/python-393/) 
 ===
