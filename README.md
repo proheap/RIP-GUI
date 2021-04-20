@@ -14,7 +14,7 @@ Implementation of selected functions of RIP (Routing Infromation Protocol) in Py
 - *Ing. Martin Kontšek [KIS]*
 
 ### VERSION  
-- 1.0
+- *1.0*
 
 ---
 ## ASSIGNMENT
